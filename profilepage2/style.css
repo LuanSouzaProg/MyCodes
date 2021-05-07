@@ -11,6 +11,7 @@ header{
     display: flex;
     height: 100px;
     font-family: 'Alice', serif;
+    background-color: #252525;
 }
 
 .left{
@@ -22,7 +23,7 @@ header{
     margin-top: 35px;
     margin-left: 10%;
     font-size: 24px;
-    color: #252525;
+    color: white;
     font-weight: bold;
 }
 
@@ -37,12 +38,13 @@ header{
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    color: #252525;
+    color: white;
     margin: 30px 30px;
     padding: 10px 35px;
     overflow: hidden;
     position: relative;
     border-radius: 5%;
+    border: 2px solid #5fe36a;
 }
 
 .btn:before{
@@ -53,17 +55,14 @@ header{
     width: 100%;
     height: 100%;
     background-color: #5fe36a;
-    z-index: -1;
-    transition: 0.7s ease;
-}
-
-.btn1:before{
+    opacity: 0.4;
+    transition: 0.6s ease;
     width: 110%;
     height: 0;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.btn1:hover:before{
+.btn:hover:before{
     height: 350%;
 }
 
@@ -105,7 +104,7 @@ section{
 
 .findme{
     width: 100%;
-    height: 250px;
+    padding: 40px 0;
     background-color: #252525;
     font-family: 'Alice', serif;
 }
@@ -170,7 +169,8 @@ section{
 }
 
 .imgjobs img{
-    border: 4px solid #5fe36a;
+    border: 4px solid white;
+    box-shadow: 0 0 0 3px #252525;
     transition: 0.7s ease;
 }
 
@@ -181,6 +181,49 @@ section{
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+.btnjobs{
+    display: flex;
+    justify-content: center;
+}
+
+.btn2{
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #252525;
+    margin: 30px 30px;
+    padding: 10px 35px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5%;
+    border: 2px solid #5fe36a;
+}
+
+.btn1:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #5fe36a;
+    z-index: -1;
+    transition: 0.7s ease;
+}
+
+.btn1:before{
+    width: 110%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn1:hover:before{
+    height: 350%;
+}
+
+
 
 footer{
     display: flex;
