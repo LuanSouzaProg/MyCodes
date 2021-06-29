@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header a{
+    color: #181526;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a {
+    font-weight: bold;
+    color: #181526  ;
+    text-decoration: none;
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+ul li a:hover {
+    background: #3f4159;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#header{
+    height: 70px;
+    padding: 0 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #762ea6;
+    box-shadow: 0px 3px 10px #252525;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+#menu a {
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #fff;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    ul li a:hover{
+        background: #3f4159;
+        color: #181526;
+    }
+
+    #nav.active #menu {
+        height: 100%;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1rem;
+        margin: 0 1rem;
+        border-bottom: 2px solid #181526;
+        margin-top: 10px;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after, #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introducaoRight{
+    width: 50%;
+}
+
+.introducaoRight h2{
+    font-size: 32px;
+}
+
+.introducaoRight p{
+    font-size: 24px;
+    color: #181526;
+}
+
+.introducaoRight a{
+    font-size: 24px;
+    text-decoration: none;
+    color: #181526;
+}
+
+.separacao{
+    border-top: 2px solid #181526;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.icons img{
+    width: 40px;
+    height: 40px;
+}
+
+.introducaoLeft img{
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 50%;
+}
+
+/*Sobre*/
+
+.sobre{
+    width: 100%;
+    background: #762ea6;
+    box-shadow: 0px 3px 20px #252525;
+}
+
+
+.containerSobre{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+.sobreRight{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.sobreRight img{
+    width: 300px;
+    height: 300px;
+}
+
+.sobreLeft{
+    text-align: center;
+    width: 50%;
+    margin: 40px 0;
+}
+
+.sobreLeft h2{
+    font-size: 24px;
+}
+
+.sobreLeft p{
+    font-size: 18px;
+}
+
+/*Trabalhos*/
+
+.containerImg{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.jobs h2{
+    margin: 50px 0;
+    text-align: center;
+}
+
+.imgJobs{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imgJobs img{
+    width: 300px;
+    height: 280px;
+    align-items: center;
+    border: 4px solid #762ea6;
+}
+
+.nameJobs{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nameJobs h2{
+    font-size: 24px;
+}
+
+/*Certificados*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 980px){
+    .container{
+        height: auto;
+        flex-flow: column;
+        flex-direction: column-reverse;
+    }
+
+    .introducaoRight h2{
+        font-size: 18px;
+    }
+
+    .introducaoRight p{
+        font-size: 14px;
+    }
+
+    .introducaoRight a{
+        font-size: 14px;
+    }
+
+    .introducaoLeft img{
+        width: 150px;
+        height: 150px;
+        margin: 20px 0;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .icons img{
+        margin-bottom: 20px;
+    }
+
+    /*Media Sobre*/
+
+    .containerSobre{
+        height: auto;
+        flex-flow: column;
+        flex-direction: column-reverse;
+    }
+
+    .containerSobre img {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 480px) { 
+    /* estilos aqui */
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+    /* estilos aqui */
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    /* estilos aqui */
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+   /* estilos aqui */
+}
+
+
